@@ -1,74 +1,121 @@
-🏝️ Vacation Template
+# 🛠️ Proyecto Base FullStack: Vacaciones (React + .NET)
 
-Plantilla base para proyectos fullstack con:
+Este repositorio es una plantilla lista para usar con:
 
-🔵 Backend: ASP.NET Core
+-   🧩 **Frontend**: React + TypeScript + Vite + Reactstrap
+-   🔒 **Autenticación**: JWT con expiración y redirección automática
+-   🌐 **Internacionalización**: i18n con selector de idioma
+-   📦 **Exportación**: Generación de reportes Excel desde backend
+-   🔄 **Axios Interceptors**: Loading global + manejo de errores
+-   🧪 **Estructura escalable**: Contextos, hooks, lógica separada por módulo
 
-⚛️ Frontend: React + TypeScript + Vite
+---
 
-🌐 Multilenguaje (i18n: Español/Inglés)
+## 🚀 Primeros pasos
 
-📤 Exportación de datos a Excel
+```bash
+# 1. Clona el repositorio
+npx degit <usuario>/<repositorio> nombre-proyecto
+cd nombre-proyecto
 
-🧩 Arquitectura escalable (modular por feature)
-
-🚀 Primeros pasos
-
-1. Clonar el repositorio
-
-git clone https://turepo.git
-cd nombre-del-proyecto
-
-2. Ejecutar script de instalación automática (Linux/Mac/Git Bash)
-
+# 2. Ejecuta el setup
 chmod +x setup.sh
 ./setup.sh
+```
 
-Este script hará:
+Esto instalará dependencias del frontend (`vacation.client`) y restaurará los paquetes del backend (`vacation.server`). También se generan automáticamente:
 
-🧶 npm install en vacation.client
+-   `.env.development` con variable `VITE_API_URL=https://localhost:7149`
+-   `.vscode/launch.json` con configuraciones para VS Code
 
-🛠️ dotnet restore para los proyectos .NET
+---
 
-📁 Estructura del proyecto
+## 🧱 Estructura de Carpetas
 
-/vacation.client # Frontend React con Vite y TypeScript
-/vacation.Server # ASP.NET API (WebHost)
-/vacation.Logic # Capa de lógica de negocio (servicios, helpers)
-/vacation.Data # Capa de acceso a datos (EF Core, contextos, modelos)
-/vacation.sln # Solución de Visual Studio
+```
+📦 root/
+├── vacation.client/         # Frontend React
+│   ├── src/
+│   │   ├── @core/           # Componentes, Layouts y utilidades base
+│   │   ├── context/         # React Contexts por dominio
+│   │   ├── hooks/           # Hooks personalizados
+│   │   ├── pages/           # Vistas organizadas por módulo
+│   │   ├── modals/          # Formularios y CRUDs
+│   │   ├── validations/     # Validaciones con Yup
+│   │   └── types/           # ViewModels
+│   ├── public/
+│   ├── .env.development     # Variables de entorno (generado)
+│   └── vite.config.ts
+│
+├── vacation.server/         # Backend ASP.NET Core
+│   ├── Controllers/         # Endpoints
+│   ├── Services/            # Lógica de negocio (por capa)
+│   ├── Data/                # Modelos y contexto EF
+│   ├── ViewModels/          # Modelos usados en frontend
+│   ├── Extensions/          # Helpers / middlewares
+│   └── Startup.cs / Program.cs
+│
+├── .vscode/launch.json      # Configuración VS Code (generado)
+├── setup.sh                 # Script de arranque (frontend + backend)
+└── README.md
+```
 
-🌍 Soporte Multilenguaje
+---
 
-React-i18next configurado con español e inglés.
+## 🔑 Autenticación
 
-Selector de idioma con banderas.
+-   Se usa JWT desde el backend con expiración
+-   El token se guarda en `localStorage`
+-   Interceptores lo adjuntan en cada petición automáticamente
+-   Al expirar, redirige al login
 
-Idioma persistente con localStorage.
+---
 
-📁 Exportación a Excel
+## 🌐 Internacionalización (i18n)
 
-Desde frontend: botón que descarga el archivo .xlsx
+-   Multi-idioma con `react-i18next`
+-   Selector de idioma desde el menú de usuario
+-   Idioma persistido en `localStorage`
 
-Desde backend: generación con EPPlus, usando atributos [ExportIgnore]
+---
 
-🔧 Scripts disponibles
+## 📁 Exportación a Excel
 
-Frontend
+-   Lógica para generar archivo Excel en backend con EPPlus
+-   Hook en frontend (`useAreaApi`) para descargarlo como `Blob`
 
+---
+
+## 📦 Toasts y Feedback Global
+
+-   `react-toastify` para mostrar notificaciones (éxito, error, etc.)
+-   Se inicializa en `AppLayout`
+
+---
+
+## 🧪 Futuro soporte: Generación de módulos
+
+Se planea agregar soporte con **Plop.js** para automatizar la creación de:
+
+-   Hooks (`useXyzApi`)
+-   Contexts (`XyzProvider`)
+-   Formularios (`XyzForm`)
+-   Modals (`XyzModal`)
+-   Vistas (`XyzListView`)
+
+---
+
+## ✅ ¿Listo para comenzar?
+
+Ya puedes correr el proyecto:
+
+```bash
+# Backend
+cd vacation.server
+code .
+# Ejecutar desde Visual Studio
+
+# Frontend
 cd vacation.client
-npm run dev # Desarrollo
-npm run build # Producción
-
-Backend
-
-dotnet build vacation.sln
-
-🧪 Para iniciar nuevo proyecto desde esta plantilla
-
-npx degit tu_usuario/tu_plantilla nombre-nuevo-proyecto
-cd nombre-nuevo-proyecto
-chmod +x setup.sh
-./setup.sh
-
-¡Listo para desarrollar!
+npm run dev
+```

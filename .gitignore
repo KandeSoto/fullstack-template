@@ -1,0 +1,93 @@
+# ===================================================
+# 🌐 FRONTEND (React + Vite + Node.js)
+# ===================================================
+
+# Dependencias y artefactos
+node_modules/
+dist/
+.vite/
+.cache/
+
+# Archivos de entorno
+.env
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.tsbuildinfo
+
+# Archivos de desarrollo
+.vscode/
+.history/
+
+# ===================================================
+# ⚙️ BACKEND (Visual Studio / .NET)
+# ===================================================
+
+# Configuraciones de usuario de VS
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Archivos generados por compilación
+*.dll
+*.pdb
+*.exe
+*.sourceLink.json
+
+# Archivos de caché
+*.sdf
+*.opensdf
+*.cache
+
+# Archivos del proyecto generados por VS
+*.AssemblyInfo.cs
+*.FileListAbsolute.txt
+*.AssemblyReference.cache
+
+# Carpetas de salida
+bin/
+obj/
+**/bin/
+**/obj/
+
+# ===================================================
+# 📦 ARCHIVOS ESPECÍFICOS DE TU PROYECTO
+# ===================================================
+
+# Layouts de Visual Studio
+DocumentLayout*.json
+
+# Respaldos
+*.bak
+*.backup.json
+
+# ===================================================
+# 💻 SISTEMA OPERATIVO
+# ===================================================
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# ===================================================
+# 🧪 OTROS OPCIONALES
+# ===================================================
+
+# Rider / ReSharper
+_ReSharper.*
+*.sln.ide
+.idea/
+
+# Tests temporales
+*.testoutput
+*.coverage

@@ -1,0 +1,45 @@
+{
+  "nameApp": "Vacation",
+  "login": {
+    "title": "Login",
+    "username": "Username",
+    "password": "Password",
+    "button": "Login",
+    "error": "Incorrect username or password"
+  },
+  "dashboard": {
+    "welcome": "Welcome to the Dashboard"
+  },  
+  "language": {
+    "title": "Language",
+    "spanish": "Spanish",
+    "english": "English"
+  },  
+  "messageToast": {
+    "successActive": "Success update",
+    "successDelete": "Success delete"
+  },
+  "area": {
+    "title": "Area Catalog",
+    "description": "Create and edit users with the [HR Administrator] and [HR Consultant] roles. Other roles will be automatically assigned upon login.",
+    "route": "/ Administrative / Areas",
+    "headers": {
+      "active": "Active",
+      "actions": "Actions",
+      "description": "Description"
+    }
+  },
+  "menu":{
+    "admin": "Administrative",
+    "vacation": "Vacation",
+    "report": "Reports",
+    "area": "Area",
+    "users": "Users",
+    "adminvacation": "Vacation administration",
+    "supervisorvacation": "Vacation (Supervisor)",
+    "operatorlogin": "Operator login",
+    "rhreport": "Human resources",
+    "operationcontrol": "Operations control",
+    "supervisor": "Supervisor"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "nameApp": "Vacaciones",
+  "login": {
+    "title": "Iniciar sesión",
+    "username": "Usuario",
+    "password": "Contraseña",
+    "button": "Ingresar",
+    "error": "Usuario o contraseña incorrectos"
+  },
+  "dashboard": {
+    "welcome": "Bienvenido al Panel"
+  },
+  "language": {
+    "title": "Idioma",
+    "spanish": "Español",
+    "english": "Inglés"
+  },
+  "messageToast": {
+    "successActive": "Actualizada correctamente",
+    "successDelete": "Eliminado correctamente"
+  },
+  "area": {
+    "title": "Catálogo de Áreas",
+    "description": "Alta y edición de usuarios con roles de [Administrador RH] y [Consulta RH]. Los demas roles se tomarán automaticamente al iniciar sesión.",
+    "route": "/ Administrativo / Áreas",
+    "headers": {
+      "active": "Activo",
+      "actions": "Acciones",
+      "description": "Descripción"
+    }
+  },
+  "menu":{
+    "admin": "Administrativo",
+    "vacation": "Vacaciones",
+    "report": "Reportes",
+    "area": "Área",
+    "users": "Users",
+    "adminvacation": "Administración de vacaciones",
+    "supervisorvacation": "Vacaciones (Supervisor)",
+    "operatorlogin": "Login operador",
+    "rhreport": "Recursos humanos",
+    "operationcontrol": "Control de operaciones",
+    "supervisor": "Supervisor"
+  }
+}

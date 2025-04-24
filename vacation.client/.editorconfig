@@ -1,0 +1,23 @@
+# Indica que esta es la configuración raíz
+root = true
+
+# Regla general para todos los archivos
+[*]
+charset = utf-8
+indent_style = space      # Usa espacios en lugar de tabs
+indent_size = 2           # Tamaño de indentación (2 espacios)
+end_of_line = lf          # Usa saltos de línea tipo Unix
+insert_final_newline = true     # Agrega una nueva línea al final del archivo
+trim_trailing_whitespace = true # Elimina espacios al final de cada línea
+
+# Archivos Markdown: no quitar espacios en blanco (por formato)
+[*.md]
+trim_trailing_whitespace = false
+
+# Archivos JSON y YAML
+[*.{json,yml,yaml}]
+indent_size = 2
+
+# Archivos de código (JS, TS, JSX, TSX)
+[*.{js,ts,jsx,tsx}]
+indent_size = 2
